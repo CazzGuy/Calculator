@@ -1,0 +1,49 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.container {
+    background-color: #4E4E4E;
+    width: 25rem;
+    margin: 5rem 35rem;
+    border-radius:20px ;
+    padding: 1rem;
+}
+
+.screen {
+    margin: 1rem ;
+    width: 21rem;
+    padding: 2rem;  
+    background-color: #CFDFCF;
+    border: 2px solid white;
+}
+
+table {
+    border-spacing: 15px;
+}
+
+tr {
+    background-color: #fff;
+    text-align: center;
+    
+}
+
+.lower {
+    margin-left: 1rem;
+    
+}
+
+td {
+    border-radius: 20px;
+    padding: 1rem;
+    width: 5rem;
+}
