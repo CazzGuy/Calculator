@@ -6,12 +6,14 @@ const del = document.querySelector('#clear')
 const eqs = document.querySelector('#equal')
 const perct = document.querySelector("#perct")
 const chng = document.querySelector("#transform")
+const dec = document.querySelector('#point')
 
 let operand1 = 0
 let operand2 = 0
 let res = 0
 let operator = ''
 let flag = false
+let count =  false
 
 display.style.textAlign = 'right';
 
@@ -25,6 +27,7 @@ for(let i = 0; i<num.length; i++) {
 
 for(let i = 0; i<opr.length; i++) {
     opr[i].addEventListener('click',() => {
+        count = false
         operand1 = Number(display.value)
         operator = opr[i].innerHTML
         display.value = ''
@@ -37,7 +40,7 @@ function remove() {
 }
 
 function deleted() {
-    if(res === Infinity) display.value = ""
+    if(!isFinite(res)) display.value = ""
     display.value = display.value.slice(0,display.value.length-1)
 }
 
@@ -91,5 +94,12 @@ chng.addEventListener('click', () => {
         flag = false
     }
     
+})
+
+dec.addEventListener('click', () => {
+    if(count === false) {
+        display.value += '.'
+        count = true
+    }
 })
 
